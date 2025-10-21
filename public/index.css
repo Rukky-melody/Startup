@@ -1,0 +1,609 @@
+  @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); 
+ 
+*{
+    margin: 0;
+    padding:0;
+}
+.custom-header {
+  background-color: #000;
+  color: white;
+  padding: 10px 20px;
+}
+
+.logo{
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight:200;
+  font-style: normal;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+.logo img{
+  width: 40px;
+}
+.logo:hover{
+    text-decoration: none;
+    color: white;
+}
+.social-icons a {
+  color: white;
+  margin-left: 15px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f0ad4e;
+}
+.volunteer-btn {
+  background-color: #dcc123;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+navbar{
+    padding: 5px;
+    /* align-items: center; */
+    background-color: #edcb0e;
+    margin-top: -1px;
+    font-family: inter, sans-serif;
+}
+.links{
+    display: flex;
+    margin-left: 108px;
+    gap: 2em;
+}
+.links a{
+    color:rgb(96, 96, 96);
+    font-weight: 200;
+}
+.Homebtn a{
+   color:black;
+   font-weight: 600;
+}
+.call-to-action{
+    width: 400px;
+    margin-top: 75px;
+    margin-left: 180px;
+    font-family: roboto;
+}
+.heading1{
+    font-size: 55px;
+}
+.paragraph1{
+    font-size: 50px;
+    font-weight:lighter;
+}
+.paragraph3{
+    display: flex;
+    /* border: 1px black solid; */
+    /* margin-left: 400px; */
+    margin: auto;
+    width: fit-content;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+} 
+.innertext{
+    border:2px #edcb0e  solid;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    color: black;
+    font-weight: 700;
+    margin-left: 10px;
+    width: fit-content;   
+    
+}
+/* Keyframes for float-in animation */
+.hero-section {
+  background: url('./media/img5.jpg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  color: white;
+  z-index: 1;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  background-color: #f0ad4e;
+  color: black;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #e5941e;
+}
+
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animate individual elements */
+.hero-content {
+  color: white;
+  z-index: 1;
+  padding: 20px;
+  animation: floatIn 1.5s ease-out forwards;
+}
+
+/* Optional: stagger effect using delay */
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  opacity: 0;
+  animation: floatIn 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: floatIn 1s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.hero-button {
+  background-color: #f0ad4e;
+  color: black;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  opacity: 0;
+  animation: floatIn 1s ease-out forwards;
+  animation-delay: 0.9s;
+}
+.hero-button:hover {
+  background-color: #e5941e;
+}
+.donation-section {
+  background-color: #fff;
+  color: #000;
+}
+
+.donation-card {
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.donation-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-wrapper img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.progress-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #f0ad4e;
+  color: #000;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.donation-amount {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.donation-text {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.donation-button {
+  background-color: #f0ad4e;
+  border: none;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.donation-button:hover {
+  background-color: #e6951c;
+}
+.image-wrapper {
+  position: relative;
+  height: 220px; /* or whatever fixed height works for your layout */
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.help-section {
+  background-color: #f6f3f3;
+  color: #333;
+}
+
+.help-item .icon-box {
+  width: 50px;
+  height: 50px;
+  background-color: #d35400;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  font-size: 20px;
+}
+
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.video-wrapper img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: white; */
+  color: red;
+  font-size: 40px;
+  border-radius: 50%;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.video-wrapper:hover .play-icon {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.volunteer-banner {
+  background: url('./media/img11.jpeg') no-repeat center center/cover;
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.volunteer-overlay {
+  background: rgba(0, 0, 0, 0.4); /* dark overlay for contrast */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+
+.volunteer-content {
+  color: #fff;
+  max-width: 500px;
+}
+
+.volunteer-content h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.volunteer-content .highlight {
+  color: #f0ad4e;
+}
+
+.volunteer-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #eee;
+}
+
+.volunteer-btn {
+  background-color: #f0ad4e;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.volunteer-btn:hover {
+  background-color: #e6951c;
+}
+
+.testimonial-carousel {
+  background-color: #f8f9fa;
+}
+
+.testimonial-box {
+  max-width: 700px;
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-quote {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.testimonial-author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonial-author img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #f0ad4e;
+}
+
+.testimonial-author h5 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.testimonial-author p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #777;
+}
+.footer-area {
+  background-color: #1c1c1c;
+  color: #ccc;
+  padding: 60px 0 20px;
+  font-size: 14px;
+}
+
+.footer-area h5,
+.footer-area h6 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #f0ad4e;
+}
+
+.footer-newsletter input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+}
+
+.footer-newsletter button {
+  padding: 8px 20px;
+  background-color: #f0ad4e;
+  color: #111;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer-contact p {
+  margin-bottom: 10px;
+}
+
+.footer-contact i {
+  margin-right: 10px;
+}
+
+.footer-social a {
+  color: #ccc;
+  margin-right: 15px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #f0ad4e;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #888;
+}
+/* Hides only navbar social icons at 800px and below */
+@media screen and (min-width: 800px) {
+  #socialIcons {
+    display: none !important;
+  }
+}
+@media screen and (min-width:310px){
+  .social-icons{
+    display: none;
+  }
+}
+/* ===== RESPONSIVE FIXES ===== */
+
+/* For screens smaller than 992px */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-button {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+
+  .volunteer-content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* For screens smaller than 768px (tablets and phones) */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh;
+  }
+
+  .hero-content {
+    padding: 10px;
+  }
+
+  .paragraph3 {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .donation-card {
+    margin-bottom: 20px;
+  }
+
+  .volunteer-overlay {
+    padding-left: 20px;
+    text-align: center;
+  }
+
+  .volunteer-content {
+    max-width: 100%;
+  }
+
+  .help-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .help-item .icon-box {
+    margin-bottom: 10px;
+  }
+}
+
+/* For very small devices (phones < 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero-button {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+
+  .footer-area {
+    text-align: center;
+  }
+
+  .footer-links,
+  .footer-newsletter,
+  .footer-contact {
+    margin-top: 20px;
+  }
+}

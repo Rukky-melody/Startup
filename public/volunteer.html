@@ -1,0 +1,189 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Become a Volunteer</title>
+  <link rel="stylesheet" href="volunteer.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Bootstrap (optional, if you’re using it already) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">CharityOrg</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="medical.html">Medical</a></li>
+          <li class="nav-item"><a class="btn btn-warning text-dark ms-2" href="volunteer.html">Become a Volunteer</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- 🟨 Intro Section -->
+  <section class="volunteer-hero text-center text-white py-5">
+    <div class="container">
+      <h1>Become a Volunteer</h1>
+      <p>Your time, skills, and passion can make a lasting difference in someone’s life. Join us and be part of a change that matters.</p>
+    </div>
+  </section>
+
+  <!-- 🟧 Why Volunteer -->
+  <section class="why-volunteer py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Why Volunteer With Us?</h2>
+      <div class="row text-center">
+        <div class="col-md-3">
+          <i class="fas fa-hands-helping fa-2x mb-3 text-warning"></i>
+          <h5>Real Impact</h5>
+          <p>Your contribution directly helps communities in need.</p>
+        </div>
+        <div class="col-md-3">
+          <i class="fas fa-users fa-2x mb-3 text-warning"></i>
+          <h5>Meet Great People</h5>
+          <p>Join a passionate team working for a shared goal.</p>
+        </div>
+        <div class="col-md-3">
+          <i class="fas fa-lightbulb fa-2x mb-3 text-warning"></i>
+          <h5>Learn & Grow</h5>
+          <p>Build skills, experience, and personal growth.</p>
+        </div>
+        <div class="col-md-3">
+          <i class="fas fa-heart fa-2x mb-3 text-warning"></i>
+          <h5>Be Fulfilled</h5>
+          <p>Feel good knowing you’re making a real difference.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟩 Volunteer Roles -->
+  <section class="roles py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Volunteer Roles</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h5>Outreach Volunteer</h5>
+          <p>Spread awareness about our programs in your community.</p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h5>Event Support</h5>
+          <p>Help organize, coordinate, and run community events.</p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h5>Admin Assistant</h5>
+          <p>Help with backend and communication support tasks.</p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h5>Medical Support</h5>
+          <p>Volunteer healthcare workers to assist during health campaigns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟦 Testimonial Block -->
+  <section class="volunteer-testimonial text-white text-center py-5">
+    <div class="container">
+      <blockquote>
+        "Volunteering here gave my life a new sense of purpose. Every hour I spent felt truly meaningful."
+      </blockquote>
+      <p class="mt-3">– Rukky Melody, Long-term Volunteer</p>
+    </div>
+  </section>
+
+  <!-- 🟪 Volunteer Form -->
+  <section class="volunteer-form py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Join Us Today</h2>
+      <form action="/submit" method="POST" class="row g-3" autocomplete="off">
+        <div class="col-md-6">
+          <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+        </div>
+        <div class="col-md-6">
+          <input type="email" name="email" class="form-control" placeholder="Email" required>
+        </div>
+        <div class="col-md-6">
+          <input type="text" name="phone" class="form-control" placeholder="Phone Number" required>
+        </div> 
+        <div class="col-md-6">
+          <select name="interest" class="form-select" required>
+            <option value="">Area of Interest</option>
+            <option>Outreach</option>
+            <option>Events</option>
+            <option>Admin</option>
+            <option>Medical</option>
+          </select>
+        </div>
+         <div class="col-12">
+          <textarea name="message" class="form-control" rows="4" placeholder="Why do you want to volunteer?"></textarea>
+        </div>
+        <div class="col-12 text-center"> 
+          <button type="submit" class="btn btn-warning px-5">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+   <!-- <!-🟫 FAQ -->
+  <section class="volunteer-faq bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">FAQs</h2>
+      <div class="accordion" id="volunteerFAQ">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true">
+              Do I need experience to volunteer?
+            </button>
+          </h2>
+          <div id="a1" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              Not at all! We provide guidance and training for all volunteers.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+              Is there an age limit?
+            </button>
+          </h2>
+          <div id="a2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Volunteers must be at least 16 years old. No upper age limit!
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">
+              How much time do I need to commit?
+            </button>
+          </h2>
+          <div id="a3" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              It's flexible — even a few hours a week can make a big difference.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS (if using Bootstrap features like accordion) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+</body>
+</html>
