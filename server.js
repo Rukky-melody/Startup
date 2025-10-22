@@ -7,10 +7,11 @@ const nodemailer = require('nodemailer');
 
 // ======= MySQL Connection =======
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'Thefatboy@23',
-  database: 'formDB'
+  host: 'banutq3jmkj5spunnnpr-mysql.services.clever-cloud.com',
+  user: 'uu1igkcgb6pvx5ye',
+  password: 'OfubLinYqeR6mpFSCIhN',
+  database: 'banutq3jmkj5spunnnpr',
+  port: 3306
 });
 
 db.connect(err => {
