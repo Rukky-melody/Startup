@@ -16,5 +16,8 @@
     "mysql2": "^3.14.3",
     "nodemailer": "^7.0.5"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
