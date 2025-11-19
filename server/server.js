@@ -55,18 +55,35 @@ function serveFile(res, filePath, contentType = 'text/html') {
 const server = http.createServer((req, res) => {
   console.log(`[${req.method}] ${req.url}`);
 
- if (req.method === 'GET') {
+if (req.method === 'GET') {
+  let filePath = path.join(
+    __dirname,
+    'public',
+    req.url === '/' ? 'index.html' : req.url
+  );
 
-  let filePath = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url);
   const extname = path.extname(filePath);
   let contentType = 'text/html';
 
   if (extname === '.css') contentType = 'text/css';
   if (extname === '.js') contentType = 'text/javascript';
+  if (extname === '.png') contentType = 'image/png';
+  if (extname === '.jpg') contentType = 'image/jpeg';
+  if (extname === '.svg') contentType = 'image/svg+xml';
 
-  serveFile(res, filePath, contentType);
-  return;  // <-- THIS FIXES YOUR 404 ISSUE
+  fs.readFile(filePath, (err, content) => {
+    if (err) {
+      res.writeHead(404, { 'Content-Type': 'text/plain' });
+      res.end('404 Not Found');
+    } else {
+      res.writeHead(200, { 'Content-Type': contentType });
+      res.end(content);
+    }
+  });
+
+  return;
 }
+
 
 
   else if (req.method === 'POST') {
