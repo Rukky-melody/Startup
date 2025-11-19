@@ -99,7 +99,7 @@ const server = http.createServer((req, res) => {
           // });
 
           res.writeHead(200, { 'Content-Type': 'text/html' });
-          res.end(`<h2>Submission Successful</h2><p>Thank you for volunteering, ${name}!</p><a href="./index.html">Back to Home</a>`);
+          res.end(`<h2>Submission Successful</h2><p>Thank you for volunteering, ${name}!</p><a href="/">Back to Home</a>`);
 
         } catch (err) {
           console.error(err);
