@@ -38,6 +38,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // ======= Helper to serve static files =======
+
 function serveFile(res, filePath, contentType = 'text/html') {
   fs.readFile(filePath, (err, content) => {
     if (err) {
@@ -54,17 +55,19 @@ function serveFile(res, filePath, contentType = 'text/html') {
 const server = http.createServer((req, res) => {
   console.log(`[${req.method}] ${req.url}`);
 
-  if (req.method === 'GET') {
-    // Default to index.html if '/'
-    let filePath = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url);
-    const extname = path.extname(filePath);
-    let contentType = 'text/html';
+ if (req.method === 'GET') {
 
-    if (extname === '.css') contentType = 'text/css';
-    if (extname === '.js') contentType = 'text/javascript';
+  let filePath = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url);
+  const extname = path.extname(filePath);
+  let contentType = 'text/html';
 
-    serveFile(res, filePath, contentType);
-  }
+  if (extname === '.css') contentType = 'text/css';
+  if (extname === '.js') contentType = 'text/javascript';
+
+  serveFile(res, filePath, contentType);
+  return;  // <-- THIS FIXES YOUR 404 ISSUE
+}
+
 
   else if (req.method === 'POST') {
     let body = '';
@@ -102,8 +105,9 @@ const server = http.createServer((req, res) => {
           console.error(err);
           res.writeHead(500, { 'Content-Type': 'text/plain' });
           res.end('Database error occurred');
-        }
+        } 
       }
+      
 
       // ===== Newsletter form =====
       else if (req.url === '/subscribe') {
