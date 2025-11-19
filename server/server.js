@@ -91,12 +91,12 @@ const server = http.createServer((req, res) => {
             [name, email, phone, interest, message]
           );
 
-          await transporter.sendMail({
-            from: process.env.GMAIL_USER,
-            to: email,
-            subject: 'Thank You for Volunteering!',
-            text: `Hello ${name},\n\nWe’ve received your volunteer application for the ${interest} team.\n\nThank you for choosing to make an impact!\n\n— Charity Support Team`
-          });
+          // await transporter.sendMail({
+          //   from: process.env.GMAIL_USER,
+          //   to: email,
+          //   subject: 'Thank You for Volunteering!',
+          //   text: `Hello ${name},\n\nWe’ve received your volunteer application for the ${interest} team.\n\nThank you for choosing to make an impact!\n\n— Charity Support Team`
+          // });
 
           res.writeHead(200, { 'Content-Type': 'text/html' });
           res.end(`<h2>Submission Successful</h2><p>Thank you for volunteering, ${name}!</p><a href="./index.html">Back to Home</a>`);
@@ -120,16 +120,16 @@ const server = http.createServer((req, res) => {
         try {
           await pool.query('INSERT INTO newsletter(email) VALUES($1)', [email]);
 
-          await transporter.sendMail({
-            from: process.env.GMAIL_USER,
-            to: email,
-            subject: 'Thank You for Subscribing!',
-            html: `<div style="font-family: Arial; color:#333;">
-                    <h2>Thank you for subscribing!</h2>
-                    <p>You're now part of our mailing list — we’ll keep you updated.</p>
-                    <p>— Charity Team</p>
-                  </div>`
-          });
+          // await transporter.sendMail({
+          //   from: process.env.GMAIL_USER,
+          //   to: email,
+          //   subject: 'Thank You for Subscribing!',
+          //   html: `<div style="font-family: Arial; color:#333;">
+          //           <h2>Thank you for subscribing!</h2>
+          //           <p>You're now part of our mailing list — we’ll keep you updated.</p>
+          //           <p>— Charity Team</p>
+          //         </div>`
+          // });
 
           res.writeHead(200, { 'Content-Type': 'text/html' });
           res.end('<h2>Subscription Successful!</h2><a href="./index.html">Back to Home</a>');
