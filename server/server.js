@@ -134,11 +134,13 @@ const server = http.createServer((req, res) => {
           res.writeHead(200, { 'Content-Type': 'text/html' });
           res.end('<h2>Subscription Successful!</h2><a href="./index.html">Back to Home</a>');
 
-        } catch (err) {
-          console.error(err);
-          res.writeHead(500, { 'Content-Type': 'text/plain' });
-          res.end('Database error occurred');
-        }
+        } 
+        catch (err) {
+    console.error('❌ DATABASE ERROR:', err.message);
+    console.error(err.stack);
+    res.writeHead(500, { 'Content-Type': 'text/plain' });
+    res.end(`Database error: ${err.message}`);
+}
       }
 
       // ===== Unknown POST route =====
