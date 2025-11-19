@@ -1,10 +1,10 @@
 {
   "name": "charity",
   "version": "1.0.0",
-  "main": "server files/server.js",
+  "main": "server/server.js",
   "type": "module",
   "scripts": {
-    "start": "node server files/server.js",
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
