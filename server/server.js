@@ -10,11 +10,13 @@ const { Pool } = pkg;
 
 dotenv.config();
 
-// Fix for __dirname in ES modules
+//  __dirname in ES modules
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // ======= PostgreSQL Connection =======
+
 const pool = new Pool({
   host: "dpg-d45pc5umcj7s739612kg-a.oregon-postgres.render.com",
   user: "charitydb_7k9p_user",
@@ -25,8 +27,8 @@ const pool = new Pool({
 });
 
 pool.connect()
-  .then(() => console.log("✅ Connected to PostgreSQL"))
-  .catch(err => console.error("❌ Database connection error:", err));
+  .then(() => console.log("Connected to PostgreSQL"))
+  .catch(err => console.error(" Database connection error:", err));
 
 // ======= Email Transporter =======
 const transporter = nodemailer.createTransport({
@@ -153,7 +155,7 @@ if (req.method === 'GET') {
 
         } 
         catch (err) {
-    console.error('❌ DATABASE ERROR:', err.message);
+    console.error('DATABASE ERROR:', err.message);
     console.error(err.stack);
     res.writeHead(500, { 'Content-Type': 'text/plain' });
     res.end(`Database error: ${err.message}`);
