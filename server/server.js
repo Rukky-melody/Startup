@@ -116,7 +116,7 @@ if (req.method === 'GET') {
           // });
 
           res.writeHead(200, { 'Content-Type': 'text/html' });
-          res.end(`<h2>Submission Successful</h2><p>Thank you for volunteering, ${name}!</p><a href="/">Back to Home</a>`);
+          res.end(`<h2>Submission Successful</h2><p>Thank you for volunteering, ${name}!</p><a href="https://charityorgteam.netlify.app/">Back to Home</a>`);
 
         } catch (err) {
           console.error(err);
